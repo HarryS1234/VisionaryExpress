@@ -1,6 +1,6 @@
 "use client";
 
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function ContactQuote() {
@@ -15,127 +15,60 @@ export default function ContactQuote() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-brand-navy tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-brand-navy tracking-tight mb-6">
             Get In Touch
           </h2>
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
+            Reach out to us directly via WhatsApp or email. We&apos;ll get back to you quickly with a transparent, no-obligation estimate.
+          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           
-          {/* Left Column: Contact Info */}
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+          <motion.a 
+            href="https://wa.me/15199927703" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="flex flex-col items-center text-center p-8 rounded-2xl bg-white shadow-xl shadow-gray-200/50 border border-gray-100 hover:-translate-y-2 transition-all group"
+          >
+            <div className="w-16 h-16 bg-[#25D366] rounded-2xl flex items-center justify-center shadow-md mb-6 group-hover:scale-110 transition-transform">
+              <MessageCircle className="w-8 h-8 text-white" />
+            </div>
+            <h4 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-2">WhatsApp</h4>
+            <p className="text-xl font-bold text-brand-navy">519-992-7703</p>
+          </motion.a>
+
+          <motion.a 
+            href="mailto:visionaryexpressmovers@gmail.com" 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex flex-col items-center text-center p-8 rounded-2xl bg-white shadow-xl shadow-gray-200/50 border border-gray-100 hover:-translate-y-2 transition-all group"
           >
-            <h3 className="text-2xl font-bold text-brand-navy mb-4">Contact Information</h3>
-            <p className="text-lg text-gray-500 mb-10 leading-relaxed">
-              Fill out the form or give us a call. We'll get back to you quickly with a transparent, no-obligation estimate.
-            </p>
-            
-            <div className="space-y-8">
-              <div className="flex items-center gap-6 group">
-                <div className="flex-shrink-0 w-14 h-14 bg-brand-yellow rounded-xl flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
-                  <Phone className="w-6 h-6 text-brand-navy" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1">Phone</h4>
-                  <p className="text-lg font-bold text-brand-navy">519-992-7703</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-6 group">
-                <div className="flex-shrink-0 w-14 h-14 bg-brand-yellow rounded-xl flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
-                  <Mail className="w-6 h-6 text-brand-navy" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1">Email</h4>
-                  <p className="text-lg font-bold text-brand-navy">visionaryexpressmovers@gmail.com</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-6 group">
-                <div className="flex-shrink-0 w-14 h-14 bg-brand-yellow rounded-xl flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
-                  <MapPin className="w-6 h-6 text-brand-navy" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1">Location</h4>
-                  <p className="text-lg font-bold text-brand-navy">Ontario, Canada</p>
-                </div>
-              </div>
+            <div className="w-16 h-16 bg-brand-yellow rounded-2xl flex items-center justify-center shadow-md mb-6 group-hover:scale-110 transition-transform">
+              <Mail className="w-8 h-8 text-brand-navy" />
             </div>
-          </motion.div>
+            <h4 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-2">Email</h4>
+            <p className="text-base lg:text-lg font-bold text-brand-navy break-all sm:break-normal">visionaryexpress<br className="hidden lg:block"/>movers@gmail.com</p>
+          </motion.a>
 
-          {/* Right Column: Form */}
           <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="bg-gray-50/80 border border-gray-100 rounded-2xl p-8 lg:p-10 shadow-sm"
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex flex-col items-center text-center p-8 rounded-2xl bg-white shadow-xl shadow-gray-200/50 border border-gray-100 hover:-translate-y-2 transition-all group"
           >
-            <h3 className="text-2xl font-bold text-brand-navy mb-8">Request a Free Quote</h3>
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-              <div>
-                <label htmlFor="name" className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Your Name *</label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:ring-2 focus:ring-brand-yellow focus:border-brand-yellow outline-none transition-all shadow-sm"
-                  required
-                />
-              </div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="phone" className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Phone Number *</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:ring-2 focus:ring-brand-yellow focus:border-brand-yellow outline-none transition-all shadow-sm"
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Email Address *</label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:ring-2 focus:ring-brand-yellow focus:border-brand-yellow outline-none transition-all shadow-sm"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="date" className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Preferred Move Date</label>
-                <input
-                  type="date"
-                  id="date"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:ring-2 focus:ring-brand-yellow focus:border-brand-yellow outline-none transition-all shadow-sm text-gray-600"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="details" className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Tell us about your move *</label>
-                <textarea
-                  id="details"
-                  rows={4}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:ring-2 focus:ring-brand-yellow focus:border-brand-yellow outline-none transition-all shadow-sm"
-                  required
-                ></textarea>
-              </div>
-
-              <div className="pt-2">
-                <button
-                  type="submit"
-                  className="w-full py-4 px-6 rounded-lg bg-brand-yellow hover:bg-brand-yellow-hover text-brand-navy font-bold text-lg transition-colors shadow-sm"
-                >
-                  Submit Request
-                </button>
-              </div>
-            </form>
+            <div className="w-16 h-16 bg-brand-yellow rounded-2xl flex items-center justify-center shadow-md mb-6 group-hover:scale-110 transition-transform">
+              <MapPin className="w-8 h-8 text-brand-navy" />
+            </div>
+            <h4 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-2">Location</h4>
+            <p className="text-xl font-bold text-brand-navy">Ontario, Canada</p>
           </motion.div>
 
         </div>

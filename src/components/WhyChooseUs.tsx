@@ -1,7 +1,7 @@
 "use client";
 
 import { CheckCircle2 } from "lucide-react";
-import { Phone } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 const features = [
@@ -34,9 +34,9 @@ export default function WhyChooseUs() {
             <p className="text-lg md:text-xl text-gray-400 mb-10 leading-relaxed max-w-lg">
               At Visionary Express Movers, we believe moving should be the exciting part — not the stressful part. Our team brings care, efficiency, and honesty to every single job.
             </p>
-            <a href="tel:5199927703" className="inline-flex items-center justify-center px-8 py-4 rounded text-lg font-bold text-brand-navy bg-brand-yellow hover:bg-brand-yellow-hover transition-colors">
-              <Phone className="w-5 h-5 mr-2" />
-              Call Us Now
+            <a href="https://wa.me/15199927703" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 rounded-lg text-lg font-bold text-white bg-[#25D366] hover:bg-[#20bd5a] transition-all shadow-lg hover:-translate-y-1">
+              <MessageCircle className="w-5 h-5 mr-2" />
+              WhatsApp Us Now
             </a>
           </motion.div>
 

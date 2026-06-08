@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Phone, Truck } from "lucide-react";
+import { MessageCircle, Truck } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function Header() {
@@ -24,7 +24,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white border-b border-gray-100 shadow-sm transition-all duration-300">
+    <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           
@@ -61,9 +61,14 @@ export default function Header() {
           </nav>
 
           <div className="hidden md:flex items-center">
-            <a href="tel:5199927703" className="inline-flex items-center justify-center px-6 py-3 rounded text-sm font-bold text-brand-navy bg-brand-yellow hover:bg-brand-yellow-hover transition-colors">
-              <Phone className="w-4 h-4 mr-2" />
-              519-992-7703
+            <a 
+              href="https://wa.me/15199927703" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-lg text-sm font-bold text-white bg-[#25D366] hover:bg-[#20bd5a] transition-all shadow-md hover:shadow-lg group"
+            >
+              <MessageCircle className="w-5 h-5 mr-2 group-hover:animate-pulse" />
+              WhatsApp Us
             </a>
           </div>
           

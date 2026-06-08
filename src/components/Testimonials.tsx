@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const baseTestimonials = [
   {
-    name: "Jennifer T.",
+    name: "Priya S.",
     text: "Visionary Express made our move completely stress-free. The crew was professional, fast, and careful with everything. Highly recommend!",
   },
   {
@@ -13,7 +13,7 @@ const baseTestimonials = [
     text: "Best moving company I've used. Fair pricing, showed up on time, and nothing was damaged. Will definitely use again.",
   },
   {
-    name: "Sandra K.",
+    name: "Rahul M.",
     text: "Called them last minute and they came through. Friendly team and great service. Very impressed!",
   },
   {
@@ -21,11 +21,11 @@ const baseTestimonials = [
     text: "The movers were incredibly efficient and polite. They handled my antique furniture with the utmost care. 5 stars!",
   },
   {
-    name: "Emily W.",
+    name: "Aman K.",
     text: "Moved from a 3rd-floor walkup and they didn't complain once. Fast, friendly, and fairly priced. What more could you ask for?",
   },
   {
-    name: "Robert M.",
+    name: "Sarah W.",
     text: "From getting a quote to the final box being unloaded, the entire process was seamless. Truly a visionary team.",
   }
 ];
@@ -55,7 +55,7 @@ export default function Testimonials() {
             {testimonials.map((testimonial, index) => (
               <div 
                 key={index} 
-                className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between w-[350px] md:w-[400px] flex-shrink-0"
+                className="bg-white p-8 rounded-3xl shadow-xl shadow-gray-200/50 border border-gray-100 flex flex-col justify-between w-[350px] md:w-[400px] flex-shrink-0"
               >
                 <div>
                   <div className="flex gap-1 mb-6">
@@ -64,7 +64,7 @@ export default function Testimonials() {
                     ))}
                   </div>
                   <p className="text-gray-600 text-lg mb-8 leading-relaxed italic">
-                    "{testimonial.text}"
+                    &quot;{testimonial.text}&quot;
                   </p>
                 </div>
                 <p className="font-bold text-gray-900 text-lg">
